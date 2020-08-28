@@ -1,6 +1,6 @@
 #include<stdio.h>
 
-int findType(int seat)
+void findType(int seat)
 {   
     int types[] = {1,6,7,12,2,5,8,11,3,4,9,10};
     int i = 0;
@@ -10,22 +10,20 @@ int findType(int seat)
     }
     
     if(i <= 3)
-    {
         printf("WS");
-        return 1;
-    }
     else if(i <= 7)
-    {
         printf("MS");
-        return 2;
-    }
     else
-    {
         printf("AS");
-        return 3;
-    }
     
 }
+
+int facingSeat(int currentSeat)
+{
+    int faceSeat = 13 - currentSeat;
+    return faceSeat - currentSeat;
+}
+
 int main()
 {
     int seatNo;
@@ -37,4 +35,7 @@ int main()
         temp = 12;
 
     findType(temp);
+    int diff = facingSeat(temp);
+    printf(" %d",seatNo + diff);
+    return 0;
 }
