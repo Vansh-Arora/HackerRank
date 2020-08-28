@@ -3,26 +3,26 @@
 int findType(int seat)
 {   
     int types[] = {1,6,7,12,2,5,8,11,3,4,9,10};
-    int seatType = 0;
-    while(seat != types[seatType])
+    int i = 0;
+    while(seat != types[i])
     {
-        seatType++;
+        i++;
     }
     
-    if(seatType <= 3)
+    if(i <= 3)
     {
         printf("WS");
-        return seatType;
+        return 1;
     }
-    else if(seatType <= 7)
+    else if(i <= 7)
     {
         printf("MS");
-        return seatType;
+        return 2;
     }
     else
     {
         printf("AS");
-        return seatType;
+        return 3;
     }
     
 }
