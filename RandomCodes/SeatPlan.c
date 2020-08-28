@@ -35,7 +35,9 @@ int main()
         temp = 12;
 
     findType(temp);
+    
     int diff = facingSeat(temp);
     printf(" %d",seatNo + diff);
+    
     return 0;
 }
