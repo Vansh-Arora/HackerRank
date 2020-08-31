@@ -17,11 +17,11 @@ void findType(int seat)
     
     // Check if index lies in range of WS, MS or AS
     if(i <= 3)
-        printf("WS");
+        printf("WS\n");
     else if(i <= 7)
-        printf("MS");
+        printf("MS\n");
     else
-        printf("AS");
+        printf("AS\n");
     
 }
 
@@ -33,18 +33,23 @@ int facingSeat(int currentSeat)
 
 int main()
 {
+    int trials;
+    scanf("%d",&trials);
+    while(trials>0)
+    {
     int seatNo;
-    printf("Enter seat number: ");
+    //printf("Enter seat number: ");
     scanf("%d",&seatNo);
 
     int temp = seatNo % 12; // Since each section has 12 seats.
     if(temp == 0)
         temp = 12;          // For seat 12 temp will be 0 so we assign it 12 again
 
+    int diff = facingSeat(temp);
+    printf("%d ",seatNo + diff);
     findType(temp);
 
-    int diff = facingSeat(temp);
-    printf(" %d",seatNo + diff);
-    
+    trials--;
+    }
     return 0;
 }
