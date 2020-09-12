@@ -1,7 +1,5 @@
 def sum(n):
-    a = 1
-    d = 2
-    print( int((n/2) * ( 2*a + (n-1)*d )) )
+    print((n*n) % 1000000007)
 
 T = int(input())
 for i in range(T):
