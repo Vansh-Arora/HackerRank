@@ -5,7 +5,13 @@ import sys
 import math
 # Complete the solve function below.
 def solve(n, m):
-    
+    m = m - 1
+    mplusn = m + n
+    mfac = math.factorial(m)
+    nfac = math.factorial(n)
+    mplusnfac = math.factorial(mplusn)
+    ans = int(mplusnfac / (mfac * nfac))
+    return ans % (1000000007)
 
 
 if __name__ == '__main__':
