@@ -1,17 +1,5 @@
-a = int(input())
-b = int(input())
-n = int(input())
-ans = "no"
-if a>b:
-    big = a
-    small = b
-else:
-    big = b
-    small = a
-while( abs(big - small) != small ):
-    if n % (big-small) == 0:
-        ans = "yes"
-        break
-    else:
-        big = big-small  
-print(ans)
+T = int(input())
+assert(1<=T<=100)
+
+for i in range(T):
+    a,b,r = map(int,input().split())
