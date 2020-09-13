@@ -10,4 +10,6 @@ assert(1<=T<=10000)
 
 for i in range(T):
     num = int(input())
+    assert(1<=num<=500)
+    
     SpecialMultiple(num)
