@@ -1,5 +1,5 @@
 def lights(n):
-    print(pow(2,n) - 1)
+    print((pow(2,n) - 1) % 100000)
 
 T = int(input())
 
