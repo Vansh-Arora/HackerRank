@@ -14,3 +14,5 @@ where district = "California";
 # Query the average population for all cities in CITY, rounded down to the nearest integer.
 select round(avg(population))
 from city;
+
+# Query the sum of the populations for all Japanese cities in CITY. The COUNTRYCODE for Japan is JPN.
