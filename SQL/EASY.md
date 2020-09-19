@@ -10,3 +10,5 @@ where district = "California";
 select avg(population)
 from city
 where district = "California";
+
+# Query the average population for all cities in CITY, rounded down to the nearest integer.
