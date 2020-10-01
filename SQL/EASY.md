@@ -33,3 +33,8 @@ from Employees;
 select (Select max(Salary * months) from employee),
 count(name)
 from employee where (salary * months) = (select max(salary * months) from Employee);
+
+# Query the following two values from the STATION table:
+
+# The sum of all values in LAT_N rounded to a scale of  decimal places.
+# The sum of all values in LONG_W rounded to a scale of  decimal places.
