@@ -2,9 +2,9 @@
 # find bribes
 
 t = int(input())
-i = 0
-while i<t:
-    i+=1
+j = 0
+while j<t:
+    j+=1
     n = int(input())
     a = list(map(int, input().rstrip().split()))
     bribes = 0
