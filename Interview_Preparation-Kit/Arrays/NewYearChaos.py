@@ -9,7 +9,7 @@ while j<t:
     a = list(map(int, input().rstrip().split()))
     bribes = 0
     flag = 1
-    for i in range(n-1):
+    for i in range(n):
         if a[i] > i+1:
             bribe = a[i] - (i+1)
             if bribe > 2:
@@ -17,5 +17,7 @@ while j<t:
                 print("Too chaotic")
                 break
             bribes = bribes + bribe
+        elif (i+1 - a[i] > 1):
+            bribes+=1
     if(flag):
         print(bribes)
